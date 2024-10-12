@@ -1,0 +1,84 @@
+.polaroid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+}
+
+.polaroid {
+  background-color: #fff;
+  padding: 1rem;
+  width: 90vw;
+  max-width: 400px;
+  border: 5px solid #ffebcd; /* Borde color pastel */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: translateY(-5px); /* Efecto hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.polaroid-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.polaroid-description {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 300px;
+}
+
+.nav-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  flex-grow: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #ff7f50;
+}
+
+@media (max-width: 600px) {
+  .polaroid {
+      width: 100%;
+      max-width: none;
+      padding: 10px;
+  }
+
+  .polaroid-description {
+      font-size: 1rem;
+  }
+
+  .navigation-buttons {
+      width: 100%;
+      max-width: none;
+  }
+}
